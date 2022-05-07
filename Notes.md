@@ -1,8 +1,10 @@
 # Quick Review of Probability
+
 ## Chapter 1: Basic  Probability Theory Combinations
+
 ### 1.1. What is Probability Theory?
 
-* We define  random phenomena as events and experiments whose outcomes can not be predicted with certainty.
+* We define random phenomena as events and experiments whose outcomes can not be predicted with certainty.
 
 * Two interpretations of property:
 
@@ -10,9 +12,7 @@
 
   * Subjective Personal Belief: Probability is the quantification of our belief something would happen.
 
-  These two interpretations coincide and the theory of Probability provides a solid framework to study random phenomena with **3 Axioms of Probability**. 
-
-
+  These two interpretations coincide and the theory of Probability provides a solid framework to study random phenomena with **3 Axioms of Probability**.
 
 ### 1.2. Random Experiments and Probability
 
@@ -23,14 +23,12 @@
 * Def3: The set of all possible outcomes is called the **sample space**.
 * Def4: When we repeat an experiment several times, we call each one a **trial**.
 * Def5: An **event** is a subset of the sample space.
-
-
-
+  
 #### 1.2.2 Probability
 
 ##### a. Def
 
-We assign a probability measure $P(A)$ to an event $A$. 
+We assign a probability measure $P(A)$ to an event $A$.
 
 This is a value set between 0 and 1 that shows how likely the event is and is such that:
 
@@ -43,18 +41,16 @@ This is a value set between 0 and 1 that shows how likely the event is and is su
 
 * Axiom 2: Probability of the sample space $S$ is $P(S)=1$.
 
-* Axiom 3: If $A_1, A_2, A_3, \dots $ are disjoint, then
+* Axiom 3: If $A_1, A_2, A_3, \dots$ are disjoint, then
   $$
   P(A_1\cup A_2\cup A_3\dots) = P(A_1)+P(A_2)+P(A_3)+\dots
   $$
-
-
 
 #### 1.2.3 Finding Probabilities
 
 * To find the probability of an event, we usually follow these two steps:
 
-  * We use the specific information we have about the random experiment. 
+  * We use the specific information we have about the random experiment.
   * We then use the probability axioms.
 
 * Follow-up properties
@@ -70,8 +66,6 @@ This is a value set between 0 and 1 that shows how likely the event is and is su
   * Probability of the empty set $P(\empty)=0$
   
   * For any event $A$, $P(A)\leq 1$
-  
-    
 
 #### 1.2.4 Discrete Probability Model
 
@@ -97,15 +91,11 @@ This is a value set between 0 and 1 that shows how likely the event is and is su
 
 * Finding Probability of $A$ reduces to a counting problem.
 
-  
-
 #### 1.2.5 Continuous Probability Models
 
 * Consider a scenario where the sample space is uncountable.    For example   $S=[0,1]$
 
 * A simple example: In uniform distribution , the probability of an interval is directly proportional to the length of the interval.
-
-  
 
 #### 1.2.6 Conditional Probability
 
@@ -155,7 +145,7 @@ $$
   | Concept     | Meaning                                    | Formulas                                        |
   | ----------- | ------------------------------------------ | ----------------------------------------------- |
   | Disjoint    | $A$ and $B$ cannot occur at the  same time | $A\cap B=\empty$                                |
-  | Independent | $A$ gives no information about  $B$        | $P(A|B) = P(A)$                   $P(B|A)=P(B)$ |
+  | Independent | $A$ gives no information about  $B$        | $P(A\|B) = P(A), P(B\|A)=P(B)$ |
 
 * Three events $A, B$, and $C$ are independent if all of the following hold:
   $$
@@ -176,7 +166,7 @@ $$
 * If $A_{1}, A_{2}, \ldots, A_{n}$ are independent then:
 
 $$
-P(A_{1} \cup A_{2} \ldots \cup A_{n})=1-\left(1-P(A_1)\right)\left(1-P(A_2)\right) \ldots 
+P(A_{1} \cup A_{2} \ldots \cup A_{n})=1-\left(1-P(A_1)\right)\left(1-P(A_2)\right) \ldots
 (1-P(A_n))
 $$
 
@@ -240,9 +230,9 @@ $$
 * Ordered: Sampling in which ordering matters.
 * Unordered: Sampling in which ordering does not matter.
 
-##### d. Ordered Sampling with Replacement.
+##### d. Ordered Sampling with Replacement
 
-* We need to make $k$ draws from a set of $n$ elements in which ordering matters and repetitions is allowed. 
+* We need to make $k$ draws from a set of $n$ elements in which ordering matters and repetitions is allowed.
 
   Thus the total number of ways of choosing $k$ objects from a set with $n$ elements is $n^k$.
 
@@ -290,11 +280,6 @@ Theorem:
   $$
   {5+10-1\choose 10} = {14\choose 10}= \frac{14!}{10!4!}
   $$
-  
-  
-  
-  
-  
 
 ## Chapter 2: Discrete Random Variables
 
@@ -303,7 +288,7 @@ Theorem:
 * A random variable is a real-valued variable whose value is determined by an underlying random experiment.
 * Example：
   * Toss a coin 5 times
-  * Sample space $\{TTTTT,TTTTTH, \dots, HHHHH\}$.
+  * Sample space $\{TTTTT,TTTTH, \dots, HHHHH\}$.
   * Let us assume that we focus on the number of heads
   * So we can define a random variable (RV) whose value is the number of observed heads
   * $x$ can take values $0,1,2,3,4,5$
@@ -313,8 +298,6 @@ Theorem:
   * Categories of RVs
     * Three classes of RVs: Discrete, Continuous, Mixed
     * $X$ is a discrete RV if its range is countable.
-
-
 
 ### 2.2 Probability Mass Function (PMF)
 
@@ -329,9 +312,7 @@ $$
   * $0\leq P_X(x)\leq 1$ for all $x$
   * $\sum_{x\in R_x}P_X(x)=1$
   * For any set $A\sub R_X$, $P(X\in A) = \sum_{x\in A}P_X(x)$
-
-
-
+  
 ### 2.3 Independent RVs
 
 * Consider two RVs $X$ and $Y$
@@ -341,8 +322,6 @@ $$
 * Can be generalized to more than two RVs.
 
   Consider $n$ RVs $X_1, X_2, \dots, X_n$, If $P(X_1=x_1, X_2=x_2, \dots, X_n=x_n) = P(X_1=x_1)\cdot P(X_2=x_2)\dots \cdot P(X_n=x_n)$ for all $x_1, x_2, \dots, x_n$, then $X_1, X_2, \dots, X_n$ are independent.
-
-
 
 ### 2.4 Cumulative Distribution Function (CDF)
 
@@ -370,9 +349,7 @@ $$
       $$
 
     * For all $a\leq b$, we can write $P(a<x\leq b)=F_X(b)-F_X(a)$
-
-
-
+  
 ### 2.5 Expectation
 
 * The average of a RV is also called mean or expected value
@@ -387,8 +364,6 @@ $$
   * $E(ax+b)=aE(x)+b$ for all $a,b\in \mathbb R$
   * $E(X_1+X_2+\dots +X_n) = E(X_1)+E(X_2)+\dots+E(X_n)$  for any set of RVs $X_1, X_2, \dots, \_Xn$, regardless of the fact that $X_1, X_2, \dots, X_n$ are independent or not.
 
-
-
 ### 2.6 Functions of RVs
 
 #### a.Def
@@ -399,7 +374,7 @@ $$
 
 * The range of $Y$, $R_Y$ is given by $R_Y=\{g(x)|x\in R_X\}$
 
-* Assuming that we know the PMF of $X$, then we can write the PMF of $Y$ as 
+* Assuming that we know the PMF of $X$, then we can write the PMF of $Y$ as
   $$
   P_Y(y) = P(Y=y) = P(g(X)=y) = \sum_{x|g(x)=y}P_X(x)
   $$
@@ -419,7 +394,7 @@ $$
 \sigma_x^2=Var(X)=E\left((X-\mu_X)^2\right) = \sum_{x_k\in R(X)}(x_k-\mu_X)^2P_X(x_k) = E(X^2)-E^2(X) = \sum_{x_k\in R(X)}x_k^2P_X(x_k)-\mu_X^2
 $$
 
-* We also define the standard deviation of RV 
+* We also define the standard deviation of RV
   $$
   SD(X) = \sigma_X=\sqrt{Var(X)}
   $$
@@ -427,8 +402,6 @@ $$
 * Properties
   * $Var(aX+b)= a^2Var(X)$
   * If $X_1, X_2, \dots, X_n$ are independent RVs, then $Var(X_1+X_2+\dots+X_n)=Var(X_1)+Var(X_2)+\dots+Var(X_N)$
-
-
 
 ### 2.7 Special Distributions
 
@@ -449,7 +422,7 @@ $$
 
 * Bernoulli RV is also called the Indicator RV
 
-* The indicator RV $I_A$ for an event $A$ is defined as 
+* The indicator RV $I_A$ for an event $A$ is defined as
   $$
   I_A = \left\{
   \begin{array}{rcl}
@@ -464,23 +437,21 @@ $$
 
 #### b. Geometric Distribution (number of trials until the first success)
 
-$R_X=\{1,2,3,4,\dots\}$
+$$R_X=\{1,2,3,4,\dots\}$$
 
-$P_X(k) = p(1-p)^{k-1}$
+$$P_X(k) = p(1-p)^{k-1}$$
 
 * Remark: some books define the Geometric RV $Y$ as the number of failures before observing the first success
 
-  $R_Y=\{0, 1,2,3,4,\dots\}$
+  $$R_Y=\{0, 1,2,3,4,\dots\}$$
 
-  $P_Y(k) = p(1-p)^k~~~~~for~k=0,1,2,\dots$
+  $$P_Y(k) = p(1-p)^k~~~~~for~k=0,1,2,\dots$$
 
-#### c. Binomial Distribution (number of successes in $n$ trials) 
+#### c. Binomial Distribution (number of successes in $n$ trials), $X\sim B(n,p)$
 
-#### $X\sim B(n,p)$
+$$R_X=\{1,2,3,4,\dots,n\}$$
 
-$R_X=\{1,2,3,4,\dots,n\}$
-
-$P_X(k) = {n\choose k} p^k(1-p)^{n-k} ~~~~~~for ~~k=0,1,2,\dots, n$
+$$P_X(k) = {n\choose k} p^k(1-p)^{n-k} ~~~~~~for ~~k=0,1,2,\dots, n$$
 
 * Lemma: Binomial RV is a sum of Bernoulli RVs
 
@@ -492,11 +463,10 @@ $P_X(k) = {n\choose k} p^k(1-p)^{n-k} ~~~~~~for ~~k=0,1,2,\dots, n$
 
   Then $Z\sim B(n+m,p)$
 
-#### d. Negative Binomial (Pascal) Distribution (number of trials until $k^{th}$ success)
+#### d. Negative Binomial (Pascal) Distribution (number of trials until $k^{th}$ success), $X\sim Pascal(k,p)$
 
-$R_X=\{k, k+1, k+2,\dots\}$
+$$R_X=\{k, k+1, k+2,\dots\}$$
 
-$X\sim Pascal(k,p)$, then
 $$
 P_X(x) = \left\{
 \begin{array}{rcl}
@@ -512,7 +482,7 @@ $$
 
 * $R_X=\{max(0,k-r), max(0, k-r)+1, \dots, min(k,b)\}$
 
-* In general $X$ is said to be a Hypergeometrix RV with parameters $b$ and $r$ shown as 
+* In general $X$ is said to be a Hypergeometrix RV with parameters $b$ and $r$ shown as
   $$
   X\sim Hypergeometric(b,r,k)
   $$
@@ -526,8 +496,6 @@ $$
   \right.
   $$
 
-  
-
 #### f. Poisson Distribution
 
 * A RV $X$ is said to be a Poisson RV with parameter $\lambda$ shown as $X\sim Poisson(\lambda)$ if its range is $R_X=\{0, 1,2,3,4,\dots\}$, and
@@ -540,13 +508,12 @@ $$
   \right.
   $$
 
-* Remark: The Poisson distribution can be viewed as an approximation of the Binomial distribution 
+* Remark: The Poisson distribution can be viewed as an approximation of the Binomial distribution
 
-* Theorem: Let $X\sim B(n,p=\frac \lambda n)$ with a fixed $\lambda>0$. Then for any $k=0,1,2\dots$, we have 
+* Theorem: Let $X\sim B(n,p=\frac \lambda n)$ with a fixed $\lambda>0$. Then for any $k=0,1,2\dots$, we have
   $$
   \lim_{n\rightarrow+\infin}P_X(k)=\frac{e^{-\lambda}\lambda^k}{k!}
   $$
-  
 
 #### g. Expectation of special distributions
 
@@ -560,7 +527,7 @@ X\sim Bernoulli(p)\Rightarrow \left\{
 $$
 
 $$
-X\sim Geometric(p)\Rightarrow 
+X\sim Geometric(p)\Rightarrow
 \left\{
 \begin{array}{rcl}
 &E(X)=\frac 1 p  \\
@@ -588,7 +555,7 @@ X\sim Binomial(n,p)\Rightarrow \left\{
 $$
 
 $$
-X\sim Pascal(k, p)\Rightarrow 
+X\sim Pascal(k, p)\Rightarrow
 \left\{
 \begin{array}{rcl}
 &E(X)=\frac k p \\
@@ -601,10 +568,6 @@ $$
 X\sim Hypergeometric(b,r,k)\Rightarrow E(X)=\frac{kb}{b+r}
 $$
 
-
-
-
-
 ## Chapter 3: Continuous RVs
 
 ### 3.1 Introduction
@@ -612,9 +575,7 @@ $$
 * Continuous RVs have a range in the form of :
   * interval on the real number line
   * Union of non overlapping interval on real line
-
-
-
+  
 ### 3.2 CDF and Probability Density Function (PDF)
 
 * **CDF**
@@ -655,12 +616,10 @@ $$
   * $P(a<x\leq b)=F_X(b)-F_X(a)=\int_a^bf_X(x)dx$
   * More generally for a set $A$, $P(x\in A)=\int_Af_X(x)dx$
   * Range of $X$ is defined as $R_X=\{x|f_X(x)>0\}$
-
-
-
+  
 ### 3.3 Expected value and variance
 
-#### a.
+#### a. basics
 
 * Def: $\mu_X=E(X)=\int_{-\infin}^{+\infin}xf_X(x)dx$
 
@@ -681,7 +640,7 @@ $$
 * Moments (centered around $\mu_X$): $E\left((X-\mu_X)^n\right)$
 * Moments (centered around zero): $E\left(X^n\right)$
 * Moment Generating Function (MGF)
-  * Def: The MGF of a RV $X$ is defined as 
+  * Def: The MGF of a RV $X$ is defined as
 
 $$
 M_X(s)=E(e^{sX})=\int_{-\infin}^{+\infin}e^{sx}f_X(x)dx~~~~~for ~~s\in[a,b]~~~\text{where this integral converges}
@@ -693,17 +652,15 @@ $$
 M_X(s)=E(e^{sX})=E(1+sx+\frac{s^2X^2}2+\frac{s^3X^3}{3!}+\dots)=\sum_{k=0}^{+\infin}\frac{s^k}{k!}E(X^k)
 $$
 
-​		where $E(X^k)$ is the Moments of RV $X$.	
+​where $E(X^k)$ is the Moments of RV $X$.
 
-* 
+* $M_X(s)|_{s=0}=E(e^{0X})=1$
+* $\frac{dM_X(s)}{ds}|_{s=0}=E(Xe^{sX})|_{s=0}=E(X)$, which is the First Moment of $X$
+* $E(X^n)=\frac{d^nM_X(s)}{ds^n}|_{s=0}$
 
-  * $M_X(s)|_{s=0}=E(e^{0X})=1$
-  * $\frac{dM_X(s)}{ds}|_{s=0}=E(Xe^{sX})|_{s=0}=E(X)$, which is the First Moment of $X$ 
-  * $E(X^n)=\frac{d^nM_X(s)}{ds^n}|_{s=0}$
-
-* Example: 
+* Example:
   $$
-  f_X(x)=\frac 1{\pi(1+x^2)}	~~~~~for~~ x\in \mathbb R
+  f_X(x)=\frac 1{\pi(1+x^2)}~~for~~ x\in \mathbb R
   $$
   This is Cauchy PDF
   $$
@@ -727,8 +684,6 @@ $$
   E(X^n)=(-j)^n\frac{d^n\Phi_X(\omega)}{d\omega^n}|_{\omega=0}
   $$
 
-  
-
 ### 3.4 Function of Continuous RV
 
 * If $X$ is a continuous RV, then $Y=g(X)$ is also a RV.
@@ -736,7 +691,7 @@ $$
 
 #### a. Method of Transformations
 
-**Theorem 1**: Support that $X$ is a continuous RV and $g: \mathbb R\rightarrow \mathbb R$ is a strictly monotonic differentiable function. Let $Y=g(X)$. Then the PDF of $Y$ is given by:
+**Theorem 1**: Suppose that $X$ is a continuous RV and $g: \mathbb R\rightarrow \mathbb R$ is a strictly monotonic differentiable function. Let $Y=g(X)$. Then the PDF of $Y$ is given by:
 $$
 f_Y(y) = \left\{
 \begin{array}{rcl}
@@ -747,10 +702,8 @@ f_Y(y) = \left\{
 $$
 
 * We can extend the previous Theorem to a more general case for $g$ not monotonic. We can divide $g$ into finite number of monotonic differentiable parts.
-
-
-
-**Theorem 2**: Consider a continuous RV $X$ with domain $R_X$. Let $Y=g(X)$. Suppose that we can partition $R_X$ into a finite number of intervals such that $g(X)$ is strictly monotone and differentiable on each partition. Then the PDF of $Y$ is given by 
+  
+**Theorem 2**: Consider a continuous RV $X$ with domain $R_X$. Let $Y=g(X)$. Suppose that we can partition $R_X$ into a finite number of intervals such that $g(X)$ is strictly monotone and differentiable on each partition. Then the PDF of $Y$ is given by
 $$
 f_Y(y)=\sum_{i=1}^n\frac{f_X(x_i)}{|g'(x_i)|}=\sum_{i=1}^nf_X(x_i)|\frac{dx_i}{dy}|\\
 \text{with~~} x_1, x_2, \dots, x_n \text{~~are real solutions for~~} g(x)=y
@@ -760,30 +713,31 @@ $$
 
 * Exp1: RV $X$ with PDF $f_X(x)= 4x^3$ for $0<x\leq 1$ and $f_X(x)=0$ otherwise.
 
-  Q: Find the PDF of $Y=\frac 1 X$
+  * Q: Find the PDF of $Y=\frac 1 X$
 
-  A1: $R_Y=[1,+\infin)$
+  * A1: $R_Y=[1,+\infin)$
 
-  ​	Use method of transformation
+    ​Use method of transformation
 
-  ​	$f_Y(y)=\frac{f_X(x_1)}{|g'(x_1)|}$ with $x_1=g^{-1}(y)=\frac 1 y$
+    ​$f_Y(y)=\frac{f_X(x_1)}{|g'(x_1)|}$ with $x_1=g^{-1}(y)=\frac 1 y$
 
-​			Thus 
-$$
-f_Y(y)=
-\left\{
-\begin{array}{rcl}
-&\frac{f_X(x_1)}{|-\frac 1{x^2}|}=\frac{\frac 4 {y^3}}{y^2}=\frac 4{y^5} ~~~&for~~y\geq1\\
-&0&\text{otherwise}
-\end{array}
-\right.
-$$
-​	    A2: CDF-based approach
-$$
-F_Y(y)=P(Y\leq y)=P(\frac 1 X\leq y)=P(X\geq \frac 1 y)=1-F_X(\frac 1 y)\\
-F_X(x)=\int_0^x4x^3dx=x^4\\
-f_Y(y)=\frac{dF_Y(y)}{dy}=\frac 4{y^5}
-$$
+    ​Thus
+    $$
+    f_Y(y)=
+    \left\{
+    \begin{array}{rcl}
+    &\frac{f_X(x_1)}{|-\frac 1{x^2}|}=\frac{\frac 4 {y^3}}{y^2}=\frac 4{y^5} ~~~&for~~y\geq1\\
+    &0&\text{otherwise}
+    \end{array}
+    \right.
+    $$
+
+  * A2: CDF-based approach
+    $$
+    F_Y(y)=P(Y\leq y)=P(\frac 1 X\leq y)=P(X\geq \frac 1 y)=1-F_X(\frac 1 y)\\
+    F_X(x)=\int_0^x4x^3dx=x^4\\
+    f_Y(y)=\frac{dF_Y(y)}{dy}=\frac 4{y^5}
+    $$
 
 * Exp2: RV $X$ with PDF $f_X(x)=\frac 1{\sqrt{2\pi}}e^{-\frac{x^2}2}$
 
@@ -791,51 +745,49 @@ $$
 
   $x_1=\sqrt y,~ x_2=-\sqrt y$
 
-  A1: Apply Theorem 2:
+  * A1: Apply Theorem 2:
 
-$$
-f_Y(y)=\frac{f_X(x_1)}{|g'(x_1)|}+\frac{f_X(x_2)}{|g'(x_2)|}=\frac{f_X(\sqrt y)}{|2\sqrt y|}+\frac{f_X(\sqrt y)}{|2\sqrt y|}\\
-f_Y(y)=
-\left\{
-\begin{array}{rcl}
-&\frac{1}{\sqrt{2\pi y}}e^{-\frac y 2} ~~~&for~~y\geq0\\
-&0&\text{otherwise}
-\end{array}
-\right.
-$$
-
-​		A2: CDF approach
-$$
-F_Y(y)=P(Y\leq y)=P(X^2\leq y)=P(-\sqrt y\leq x\leq \sqrt y)~~~~~for ~~y\geq 0\\
-F_Y(y)=F_X(\sqrt y)-F_X(-\sqrt y)\\
-f_Y(y)=\frac 1{2\sqrt y}f_X(\sqrt y)+\frac 1{2\sqrt y}f_X(-\sqrt y)
-$$
-
+    $$
+    f_Y(y)=\frac{f_X(x_1)}{|g'(x_1)|}+\frac{f_X(x_2)}{|g'(x_2)|}=\frac{f_X(\sqrt y)}{|2\sqrt y|}+\frac{f_X(\sqrt y)}{|2\sqrt y|}\\
+    f_Y(y)=
+    \left\{
+    \begin{array}{rcl}
+    &\frac{1}{\sqrt{2\pi y}}e^{-\frac y 2} ~~~&for~~y\geq0\\
+    &0&\text{otherwise}
+    \end{array}
+    \right.
+    $$
+  * A2: CDF approach
+    $$
+    F_Y(y)=P(Y\leq y)=P(X^2\leq y)=P(-\sqrt y\leq x\leq \sqrt y)~~~~~for ~~y\geq 0\\
+    F_Y(y)=F_X(\sqrt y)-F_X(-\sqrt y)\\
+    f_Y(y)=\frac 1{2\sqrt y}f_X(\sqrt y)+\frac 1{2\sqrt y}f_X(-\sqrt y)
+    $$
 
 ### 3.5 Special Continuous Distributions
 
 #### a. Uniform distribution
 
-PDF: 
-$$
-f_X(x) = \left\{
-\begin{array}{rcl}
-&\frac 1{b-a} &for ~~a\leq x<b\\
-&0&otherwise
-\end{array}
-\right.
-$$
-CDF:
-$$
-F_X(x) = \left\{
-\begin{array}{rcl}
-&0& for ~~x<a\\
-&\frac {x-a}{b-a} &for ~~a\leq x<b\\
-&1&for ~~x\geq b
-\end{array}
-\right.
-$$
-$E(X)=\frac{a+b}2$, $Var(X)=\frac {(b-a)^2}{12}$
+* PDF:
+  $$
+  f_X(x) = \left\{
+  \begin{array}{rcl}
+  &\frac 1{b-a} &for ~~a\leq x<b\\
+  &0&otherwise
+  \end{array}
+  \right.
+  $$
+* CDF:
+  $$
+  F_X(x) = \left\{
+  \begin{array}{rcl}
+  &0& for ~~x<a\\
+  &\frac {x-a}{b-a} &for ~~a\leq x<b\\
+  &1&for ~~x\geq b
+  \end{array}
+  \right.
+  $$
+* $E(X)=\frac{a+b}2$, $Var(X)=\frac {(b-a)^2}{12}$
 
 #### b. Exponential Distribution
 
@@ -850,7 +802,7 @@ f_X(x) = \left\{
 \right.
 $$
 
-* CDF of $X$ 
+* CDF of $X$
 
 $$
 F_X(x) = \left\{
@@ -869,47 +821,45 @@ $$
 
     The exponential distribution can be viewed as the continuous version of the geometric RV
 
-    Suppose that you toss a coin until you observe the first head and  the RV $X$ be the time you observe the first head. So it we let $\Delta$ be the time between two tosses and the proba of heads, let $$ p=\Delta \cdot \lambda \text { then, as } $$ $\Delta \longrightarrow 0, \quad x \sim\operatorname{Exp}(\lambda)$
+    Suppose that you toss a coin until you observe the first head and  the RV $X$ be the time you observe the first head. So it we let $\Delta$ be the time between two tosses and the proba of heads, let $p=\Delta \cdot \lambda \text { then, as }$ $\Delta \rightarrow 0, x \sim\operatorname{Exp}(\lambda)$
 
   * P2: Memoryless Property of Exponential RV
     Theorem:
 
-    Consider $X\sim Exp(\lambda)$ with $\lambda>0$, then 
+    Consider $X\sim Exp(\lambda)$ with $\lambda>0$, then
     $$
     P(X>x+\delta|x>\delta)=P(X>x)~~~~~\text{for all }\delta \text{ and }x\geq0
     $$
 
-#### c. Gaussian (Normal) Distribution
+#### c. Gaussian (Normal) Distribution $X\sim N(\mu,\sigma^2)$
 
-$X\sim N(\mu,\sigma^2)$
 $$
 f_X(x)=\frac 1 {\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}~~~~~for~~ -\infin<x<+\infin
 $$
-Standard Gaussian $N(0,1)$, $f_X(x)=\frac 1 {\sqrt{2\pi}}e^{-\frac{x^2}{2}}$
 
-CDF of $N(0,1)$: $F_X(x)=\int_{-\infin}^x\frac 1{\sqrt{2\pi}}e^{-\frac{t^2}2}dt = \phi(x)$
+* Standard Gaussian $N(0,1)$, $f_X(x)=\frac 1 {\sqrt{2\pi}}e^{-\frac{x^2}{2}}$
 
-For $X\sim N(\mu,\sigma^2)$, $F_X(x)=\phi(\frac{x-\mu}\sigma)$
+* CDF of $N(0,1)$: $F_X(x)=\int_{-\infin}^x\frac 1{\sqrt{2\pi}}e^{-\frac{t^2}2}dt = \phi(x)$
 
-* Properties of $\phi(x)$:
+* For $X\sim N(\mu,\sigma^2)$, $F_X(x)=\phi(\frac{x-\mu}\sigma)$
 
-  * $\lim_{x\rightarrow -\infin}\phi(x)=0$
+  * Properties of $\phi(x)$:
 
-  * $\lim_{x\rightarrow +\infin}\phi(x)=1$
+    * $\lim_{x\rightarrow -\infin}\phi(x)=0$
 
-  * $\phi(0)=\frac 1 2$
+    * $\lim_{x\rightarrow +\infin}\phi(x)=1$
 
-  * $\phi(-x)=1-\phi(x)$
+    * $\phi(0)=\frac 1 2$
 
-  * Useful bound:
-    $$
-    \frac 1 {\sqrt{2\pi}}\frac {x}{x^2+1}e^{-\frac{x^2}{2}}\leq 1-\phi (x)\leq\frac 1 {\sqrt{2\pi}} \frac 1 x e^{-\frac{x^2}{2}}
-    $$
+    * $\phi(-x)=1-\phi(x)$
 
-  * If $X\sim N(\mu_X,\sigma_X^2)$ and $Y=aX+b$, then $Y\sim N(a\mu_X+b,~~a^2\sigma_X^2)$
+    * Useful bound:
+      $$
+      \frac 1 {\sqrt{2\pi}}\frac {x}{x^2+1}e^{-\frac{x^2}{2}}\leq 1-\phi (x)\leq\frac 1 {\sqrt{2\pi}} \frac 1 x e^{-\frac{x^2}{2}}
+      $$
 
-
-
+    * If $X\sim N(\mu_X,\sigma_X^2)$ and $Y=aX+b$, then $Y\sim N(a\mu_X+b,~~a^2\sigma_X^2)$
+  
 ### 3.7 Mixed RVs
 
 * Def: A Mixed RV has a discrete part and a continuous part.
@@ -963,20 +913,16 @@ $$
   \int_{-\infin}^{+\infin}f_X(x)dx=\sum_ka_k+\int_{-\infin}^{+\infin}g(x)dx=1
   $$
   
-* As a special case, if $X$ is a discrete RV with range $R_X=\{x_1,x_2,\dots\}$ and PMF $P_X(x)$, we can define its PDF as 
+* As a special case, if $X$ is a discrete RV with range $R_X=\{x_1,x_2,\dots\}$ and PMF $P_X(x)$, we can define its PDF as
   $$
    f_X(x)=\sum_{x\in R_X}P_X(x_k)\delta(x-x_k)
   $$
-
-
-
-
 
 ## Chapter 4: Simulations of RVs
 
 ### 4.1 Method of Inverse Transform
 
-#### a. Method
+#### a.Method
 
 * Suppose we want to generate a RV $X$ with a prescribed CDF $F_X(x)$
 
@@ -994,7 +940,7 @@ $$
   2. Computer the value $x$ such that $F_X(x)=y$ (i.e. $x=F_X^{-1}(y)$)
   3. Take $x$ to be the random number generated.
 
-#### b. Examples
+#### b.Examples
 
 * Example 1:
 
@@ -1014,7 +960,7 @@ $$
 
   Suppose we want to generate a RV with an exponential distribution given by:
   $$
-  f_X(x)=\lambda e^{-\lambda x}u(x)~~~~~	\text{ with } \lambda>0 \text{ and u(x) is the unit step function}\\
+  f_X(x)=\lambda e^{-\lambda x}u(x)~~~~\text{ with } \lambda>0 \text{ and u(x) is the unit step function}\\
   F_X(x)=1-e^{-\lambda x}
   $$
   Therefore given $y$, we can get $x$ by the mapping $1-e^{-\lambda x}=y$, i.e. $x=-\frac{\ln(1-y)}\lambda$
@@ -1048,8 +994,6 @@ $$
   \right.\\
   $$
 
-
-
 ### 4.2 Method of Acceptance-Rejection
 
 * Inversing the CDF of a desired RV $X$ to be simulated can not always be done in closed form. For many samples inversing makes it computationally costly.
@@ -1070,13 +1014,11 @@ $$
 
 * Remark: For this algorithm to be efficient, $c$ should be as close as possible to $1$.
 
-
-
 ### 4.3 Histogram and Empirical CDF
 
-Assume that we have $\boldsymbol{n}$ i.i.d. observations $\left\{\boldsymbol{x}_{k}\right\}_{k=1}^{n}$ and we want to estimate the underlying PDF. 
+Assume that we have $\boldsymbol{n}$ i.i.d. observations $\left\{\boldsymbol{x}_{k}\right\}_{k=1}^{n}$ and we want to estimate the underlying PDF.
 
-One simple method for doing this is to divide the range of observations into $k$ intervals at points $c_{0}, c_{1}, c_{2}, \ldots, c_{k}$. 
+One simple method for doing this is to divide the range of observations into $k$ intervals at points $c_{0}, c_{1}, c_{2}, \ldots, c_{k}$.
 
 Defining $\Delta_{j}=c_{j}-c_{j-1}, j=1,2, \ldots, k$ and $n_{j}$ as the number of observations that fall in the interval $\left(c_{j-1}, c_{j}\right]$, the estimated PDF $\hat{f}(x)=\frac{n_{j}}{n \Delta_{j}}, x \in\left(c_{j-1}, c_{j}\right]$. (Function $h(x)=n_{j}$ is called histogram.)
 
@@ -1093,15 +1035,12 @@ The empirical CDF (or cumulative histogram) is $\widehat{\boldsymbol{F}}(\boldsy
 $$
 \begin{aligned}
 &\mathbb{E}\{\widehat{F}(x)\}=\frac{1}{n} \sum_{k=1}^{n} \mathbb{E}\left\{\mathbb{I}\left\{x_{k} \leq x\right\}\right\}=\frac{1}{n} \sum_{k=1}^{n} \mathbb{P}\left(x_{k} \leq x\right)=\frac{1}{n} \sum_{k=1}^{n} F_{X}(x)=F_{X}(x) \\
-&\operatorname{Var}\{\widehat{F}(x)\}= \frac{1}{n^{2}} \sum_{k=1}^{n} 
+&\operatorname{Var}\{\widehat{F}(x)\}= \frac{1}{n^{2}} \sum_{k=1}^{n}
 \operatorname{Var}\left\{\mathbb{I}\left\{x_{k} \leq x\right\}\right\}=\frac{1}{n^{2}} \sum_{k=1}^{n}\left[\mathbb{P}\left(x_{k} \leq x\right)-\left(\mathbb{P}\left(x_{k} \leq x\right)\right)^{2}\right] \\
 &=\frac{F_{X}(x)-\left[F_{X}(x)\right]^{2}}{n} \leq \frac{1}{4 n} \\
 
 \end{aligned}
 $$
-
-
-
 
 ## Chapter 5: Probability Bounds
 
@@ -1115,7 +1054,7 @@ P(A_1\cup A_2\cup\dots\cup A_n)\leq P(A_1)+P(A_2)+\dots+P(A_n)
 $$
 It is widely use in the area of random graph
 
-* Example: Consider an Erdos-Rany Graph model $G(n,p)$, 
+* Example: Consider an Erdos-Rany Graph model $G(n,p)$,
 
   where $n$ is the number of nodes in the graph  and each pair of nodes are connected by an edge with probability $p$.
 
@@ -1125,7 +1064,7 @@ It is widely use in the area of random graph
 
   A: Consider $G(n,p)$ model, let $B_n$ denote the event that $G(n,p)$ has at least one isolated node.
 
-  ​	Let $A_i$ be the event that the $i$-th node is isolated. Then $B_n=\bigcup_{i=1}^nA_i$
+  ​Let $A_i$ be the event that the $i$-th node is isolated. Then $B_n=\bigcup_{i=1}^nA_i$
   $$
   P(B_n)=P(\bigcup_{i=1}^nA_i)\leq \sum_{i=1}^nP(A_i)=nP(A_1)
   $$
@@ -1145,7 +1084,7 @@ It is widely use in the area of random graph
   $$
   In general, if you write an odd number of terms, then you get an upper bound and if you write an even number of terms you get a lower bound.
 
-#### c. Expected Value of the number of Events.
+#### c. Expected Value of the number of Events
 
 * The union bound formula is also equal to the expected value of the number of occurred events.
 
@@ -1159,9 +1098,7 @@ It is widely use in the area of random graph
 
 * So with reference to previous Example, we can conclude that the expected number of isolated nodes in a graph randomly generated occurs to $G(n,p)$ is also equal to $E(X)=n(1-p)^{n-1}$
 
-
-
-### 5.2 Markov, Chebyshev and Chernoff Inequalities.
+### 5.2 Markov, Chebyshev and Chernoff Inequalities
 
 #### a. Markov Bound
 
@@ -1171,7 +1108,7 @@ P(X\leq a)\leq \frac{E(X)}a~~~~~\forall a>0
 $$
 Remark: This inequality is useful only when $a>E(x)$
 
-#### b. chebyshev Inequality
+#### b. Chebyshev Inequality
 
 Theorem: For any arbitrary RV $Y$ and a constant $d$, we have:
 $$
@@ -1180,15 +1117,13 @@ $$
 
 #### c. Chernoff Inequality
 
-Theorem: For an arbitrary RV $X$ and a constant $c$ 
+Theorem: For an arbitrary RV $X$ and a constant $c$
 $$
 P(X\geq c)\leq \min_{s\geq0}\{e^{-s c}M_X(s)\}
 $$
 where $M_X(s)=E(e^{sX})$ is the MGF of RV $X$
 
 In particular, it holds for $s^*$ for which $e^{-s^*c}M_X(s^*)$ is the minimum.
-
-
 
 ### 5.3 Jensen's Inequality
 
@@ -1213,13 +1148,11 @@ $$
 
   If $0<a<1$, then $g''(x)\leq 0~~\Rightarrow ~~ g(x)$ is concave. Then we can apply Jensen's Inequality
 
-
-
 ### 5.4 Holder, Cauchy Schwarz, Minkowski and Lyapunov Inequality
 
 #### a. Holder Inequality
 
-Theorem: If $p,q>1$ and $p^{-1}+q^{-1}=1$, then 
+Theorem: If $p,q>1$ and $p^{-1}+q^{-1}=1$, then
 $$
 E(|XY|)\leq (E(|X|^p))^\frac1p(E(|Y|^q))^\frac1q
 $$
@@ -1245,10 +1178,6 @@ $$
 $$
 
 Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments are finite also for positive $0\leq s\leq r$
-
-
-
-
 
 ## Chapter 6: Two Random Variables
 
@@ -1287,8 +1216,6 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
   P_Y(y_j)=\sum_{x_i\in R_X}P(x_i,y_j) ~~~~~\forall y_j\in R_Y\\
   $$
 
-
-
 ### 6.2 Joint Cumulative Distribution Function (JCDF)
 
 * Def: The JCDF of two RVs $X$ and $Y$ is defined as:
@@ -1300,22 +1227,19 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
 
   1. $0\leq F_{X,Y}(x,y)\leq 1$
 
-  2. * $F_{X,Y}(+\infin,+\infin)=1$
-     * $F_{X,Y}(x,-\infin)=0$
-     * $F_{X,Y}(-\infin,y)=0$
+  2. $F_{X,Y}(+\infin,+\infin)=1$
 
-  3. 
-     $$
-     P(x_1<X\leq x_2,~~ y_1<Y\leq y_2)=F_{X,Y}(x_2,y_2)-F_{X,Y}(x_1,y_2)-F_{X,Y}(x_2,y_1)+F_{X,Y}(x_1,y_1)
-     $$
+      $F_{X,Y}(x,-\infin)=0$
+
+      $F_{X,Y}(-\infin,y)=0$
+
+  3. $$P(x_1<X\leq x_2,~~ y_1<Y\leq y_2)=F_{X,Y}(x_2,y_2)-F_{X,Y}(x_1,y_2)-F_{X,Y}(x_2,y_1)+F_{X,Y}(x_1,y_1)$$
 
 * Marginal CDFs of $X$ and $Y$
   $$
   F_X(x)=F_{XY}(x,+\infin)~~~~~\forall x\\
   F_Y(y)=F_{XY}(+\infin, ~y)~~~~~\forall y\\
   $$
-
-
 
 ### 6.3 Conditioning and Independence
 
@@ -1337,12 +1261,12 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
   $$
   for any $x_i\in R_X$ and $y_j\in R_Y$
 
-* Independence: Two discrete RVs $X$ and $Y$ are independent if 
+* Independence: Two discrete RVs $X$ and $Y$ are independent if
   $$
   P_{X,Y}(x,y)=P_X(x)\cdot P_Y(y) ~~~~~for ~all~~x~~and~~y
   $$
 
-  * Equivalently, $X$ and $Y$ are independent if 
+  * Equivalently, $X$ and $Y$ are independent if
     $$
     F_{X,Y}(x,y)=F_X(x)\cdot F_Y(y)~~~~~for ~all~~x~~and~~y
     $$
@@ -1354,11 +1278,9 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
 
   * In other words, in this independent special case, knowing the value of $Y$ does not provide any information about $X$
 
-
-
 ### 6.4 Conditional Expectation
 
-* Def1: Conditioning on an event 
+* Def1: Conditioning on an event
   $$
   E(X|A)=\sum_{x_i\in R_X}x_iP_X(x|A)
   $$
@@ -1371,13 +1293,10 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
 * Law of total Expectation
 
   1. If $B_1, B_2, \dots$ form a partition of sample space $S$, then
-
   $$
   E(X)=\sum_iE(X|B_i)\cdot P(B_i)
   $$
-
   2. For a RV $X$ and another discrete RV $Y$,
-
   $$
   E(X)=\sum_{y_j\in R_Y}E(X|Y=y_j)\cdot P_Y(y_j)
   $$
@@ -1406,8 +1325,6 @@ Implication: If RV $Z$ has a finite $r^{th}$ moment, then all $s^{th}$ moments a
   * $E(g(X)\cdot h(Y))=E(g(X))\cdot E(h(Y))$
   * The converse of the third and fourth formulas are not true.
 
-
-
 ### 6.5 Conditional Variance
 
 Let $\mu_{X|Y}(y)=E(X|Y=y)$, then
@@ -1420,8 +1337,6 @@ $$
   Var(X)= E\left(Var\left(X|Y\right)\right)+Var\left(E\left(X|Y\right)\right)
   $$
 
-
-
 ### 6.6 Functions of two RVs
 
 * Consider $Z=g(X,Y)$ where $X$ and $Y$ are discrete RV and $g:\mathbb R\rightarrow \mathbb R$
@@ -1432,12 +1347,10 @@ $$
   P_Z(z)=P(g(X,Y)=z)=\sum_{(x_i,y_j)\in A_z}P_{X,Y}(x_i,y_j)
   $$
 
-* As a result we have 
+* As a result we have
   $$
   E\left(g\left(X,Y\right)\right)=\sum_{(x_j,y_j)\in R_z}g(x_i, y_j)P_{X,Y}(x_i,y_j)
   $$
-
-
 
 ### 6.7 Joint Probability Density Function
 
@@ -1449,17 +1362,17 @@ $$
 
 * Properties of $f_{X,Y}(x,y)$
 
-  * The domain of $f_{X,Y}(x,y)$ is $\mathbb {R}^2$, but we can also define the range of $(X,Y)$ as 
+  * The domain of $f_{X,Y}(x,y)$ is $\mathbb {R}^2$, but we can also define the range of $(X,Y)$ as
     $$
     R_{XY}=\{(x,y)|f_{X,Y}(x,y)>0\}
     $$
 
-  * 
+  *
     $$
     \int_{-\infin}^{+\infin}\int_{-\infin}^{+\infin}f_{X,Y}(x,y)dxdy=1
     $$
 
-  * For small positive $\delta_x$ and $\delta_y$, we can write 
+  * For small positive $\delta_x$ and $\delta_y$, we can write
     $$
     P(x<X\leq x+\delta x, ~~~y<Y<y+\delta y)\approx f_{X,Y}(x,y)\delta x\delta y
     $$
@@ -1471,8 +1384,6 @@ $$
     f_X(x)=\int_{-\infin}^{+\infin}f_{X,Y}(x,y)dy~~~~~for ~all ~~x\\
     f_Y(y)=\int_{-\infin}^{+\infin}f_{X,Y}(x,y)dx~~~~~for ~all ~~y
     $$
-
-
 
 ### 6.8 Joint CDF
 
@@ -1501,23 +1412,21 @@ $$
     F_{X,Y}(x,y)=F_X(x)\cdot F_Y(y)
     $$
 
-  * 
+  *
     $$
     F_{X,Y}(x,y)=\int_{-\infin}^{x}\int_{-\infin}^{y}f_{X,Y}(u,v)dudv
     $$
-    
-  * 
+
+  *
     $$
     f_{X,Y}(x,y)=\frac{\partial^2}{\partial x\partial y}F_{X,Y}(x,y)
     $$
   
-* 
-
-
+*
 
 ### 6.9 Conditioning and Independence
 
-For two RVs $X$ and $Y$, we can write 
+For two RVs $X$ and $Y$, we can write
 $$
 P(X\in C|Y\in D)=\frac{P(X\in C, ~~Y\in D)}{P(Y\in D)}
 $$
@@ -1585,7 +1494,7 @@ where $C, D\sub \mathbb R$
     E(X|Y=y)=\int_{-\infin}^{+\infin}xf_{X|Y}(x|y)dx
     $$
 
-  * More generally, we can have 
+  * More generally, we can have
     $$
     E(g(X)|Y=y)=\int_{-\infin}^{+\infin}g(x)f_{X|Y}(x|y)dx
     $$
@@ -1600,14 +1509,13 @@ where $C, D\sub \mathbb R$
 
 * $E(XY)=E(X)\cdot E(Y)$
 
-* More generally, we have 
+* More generally, we have
 
   $E(g(X)\cdot h(Y))=E(g(X))\cdot E(h(Y))$
 
 #### d. Functions of Two Continuous RVs
 
-* 
-  $$
+* $$
   E(g(X,Y))=\int_{-\infin}^{+\infin}\int_{-\infin}^{+\infin}g(x,y)f_{X,Y}(x,y)dxdy
   $$
   Consider $Z=g(X,Y)$
@@ -1676,12 +1584,12 @@ where $C, D\sub \mathbb R$
     Cov(\sum_{i=1}^ma_iX_i, \sum_{j=1}^mb_iY_i)=\sum_{i=1}^m\sum_{j=1}^na_ib_jCov(X_i,Y_j)
     $$
 
-  * If $Z=X+Y$, 
+  * If $Z=X+Y$,
     $$
-    Var(Z)&=E(Z^2)-E^2(Z)=E((X+Y)^2)-E^2(X+Y)\\
-    &=E(X^2+Y^2+2XY)-E^2(X)-E^2(Y)-2E(X)E(Y)\\
-    &=E(X^2)-E^2(X)+E(Y^2)-E^2(Y)+2E(XY)-2E(X)E(Y)\\
-    &=Var(X)+Var(Y)+2Cov(X,Y)
+    Var(Z)=E(Z^2)-E^2(Z)=E((X+Y)^2)-E^2(X+Y)
+    =E(X^2+Y^2+2XY)-E^2(X)-E^2(Y)-2E(X)E(Y)\\
+    =E(X^2)-E^2(X)+E(Y^2)-E^2(Y)+2E(XY)-2E(X)E(Y)
+    =Var(X)+Var(Y)+2Cov(X,Y)
     $$
     Thus
     $$
@@ -1705,17 +1613,13 @@ where $C, D\sub \mathbb R$
   * If $\rho_{XY}=-1$, then $Y=aX+b$ with $a<0$
   * $\rho(aX+b,cY+d)=\rho(X,Y)$
 
-
-
-
-
 ## Chapter 7: Multiple RVs
 
 ### 7.1 Joint Distributions and Independence
 
 * Definitions
 
-  * The joint PMF of $n$ discrete $X_1, X_2, \dots, X_n$ is 
+  * The joint PMF of $n$ discrete $X_1, X_2, \dots, X_n$ is
     $$
     P_{X_1, X_2, \dots, X_n}(x_1, x_2,\dots, x_n)\triangleq P(X_1=x_1, X_2=x_2, \dots, X_n=x_n)
     $$
@@ -1754,10 +1658,8 @@ where $C, D\sub \mathbb R$
 
 * i.i.d (independent identically distributed) RVs are RVs that are independent and have exactly the same marginals i.e.
   $$
-  F_{X_1}(x_1)= F_{X_2}(x_2)= \ldots = F_{X_n}(x_n)~~~~~for ~all ~~x\in\mathbb R 
+  F_{X_1}(x_1)= F_{X_2}(x_2)= \ldots = F_{X_n}(x_n)~~~~~for ~all ~~x\in\mathbb R
   $$
-
-
 
 ### 7.2 Random Vectors
 
@@ -1775,13 +1677,11 @@ where $C, D\sub \mathbb R$
   where $X$ is a $n$-dimensional column vector.
 
 * The CDF of a random vector $X$
-  $$
-  F_\underline X(\underline x)=F_{X_1, X_2, \dots, X_n}(x_1, x_2,\dots, x_n)={P}\left(X_{1} \leq x_{1}, X_{2} \leq x_{2}, \ldots, X_{n} \leqslant x_{n}\right)
-  $$
+  $$F_{\underline X}(\underline x)=F_{X_1, X_2, \dots, X_n}(x_1, x_2,\dots, x_n)={P}\left(X_{1} \leq x_{1}, X_{2} \leq x_{2}, \ldots, X_{n} \leqslant x_{n}\right)$$
 
 * The joint PDF can also be written as
   $$
-  f_\underline X(\underline x)=f_{X_1, X_2, \dots, X_n}(x_1, x_2,\dots, x_n)
+  f_{\underline X}(\underline x)=f_{X_1, X_2, \dots, X_n}(x_1, x_2,\dots, x_n)
   $$
 
 #### b. Expectations
@@ -1829,13 +1729,13 @@ where $C, D\sub \mathbb R$
     E(a_1X_1+a_2X_2+\dots+a_nX_n)=a_1E(X_1)+a_2E(X_2)+\dots+a_nE(X_n)
     $$
 
- #### c. Correlation and Covariance Matrix
+#### c. Correlation and Covariance Matrix
 
-* Def: For a random vector $\underline X$, we define the 
+* Def: For a random vector $\underline X$, we define the
 
-  1. Correlation Matrix of $\underline X$ as 
+  1. Correlation Matrix of $\underline X$ as
      $$
-     [R]_\underline X=E(\underline X\underline X^\top)=\left[\begin{array}{lll}
+     [R]_{\underline X}=E(\underline X\underline X^\top)=\left[\begin{array}{lll}
      E\left(X_{1}^2\right) & E\left(X_{1}X_2\right) &\cdots E\left(X_1X_{n}\right) \\
      E\left(X_{2}X_1\right) & E\left(X_{2}^2\right) & ~~~~~~ \vdots \\
      \vdots&\vdots&\ddots\vdots\\
@@ -1843,9 +1743,9 @@ where $C, D\sub \mathbb R$
      \end{array}\right]_{n \times n}
      $$
 
-  2. Covariance Matrix of $X$ as 
+  2. Covariance Matrix of $X$ as
      $$
-     [C]_\underline X=E\left(\left(\underline X-E\left(\underline X\right)\right)\left(\underline X-E\left(\underline X\right)\right)^\top\right)=[R]_\underline X-E(\underline X)\cdot E(\underline X^\top)\\
+     [C]_{\underline X}=E\left(\left(\underline X-E\left(\underline X\right)\right)\left(\underline X-E\left(\underline X\right)\right)^\top\right)=[R]_{\underline X}-E(\underline X)\cdot E(\underline X^\top)\\
      =\left[\begin{array}{lll}
      Var\left(X_{1}\right) & Cov\left(X_{1}X_2\right) &\cdots Cov\left(X_1X_{n}\right) \\
      Cov\left(X_{2}X_1\right) & Var\left(X_{2}\right) & ~~~~~~ \vdots \\
@@ -1856,26 +1756,24 @@ where $C, D\sub \mathbb R$
 
 * Properties
 
-  1. The covariance matrix $[C]_\underline X$ is a symmetric matrix
+  1. The covariance matrix $[C]_{\underline X}$ is a symmetric matrix
      $$
      C_{ij}=Cov(X_i,Y_j)=Cov(X_j,Y_i)=C_{ji}
      $$
 
-  2. $[C]_\underline X$ can be diagonalized and all eigenvalues of $[C]_\underline X$ are real
-  3.  $[C]_\underline X$ is a positive semi-definite matrix (i.e.  $b^\top[C]_\underline Xb\geq 0$ for all vector $b$)
+  2. $[C]_{\underline X}$ can be diagonalized and all eigenvalues of $[C]_{\underline X}$ are real
+  3. $[C]_{\underline X}$ is a positive semi-definite matrix (i.e.  $b^\top[C]_{\underline X}b\geq 0$ for all vector $b$)
 
 * As an extension, we can also introduce for random vectors $X$ and $Y$
 
   * $[R]_{\underline X\underline Y}=E(\underline X\underline Y^\top)$, which is the cross-correlation matrix
   * $[C]_{\underline X\underline Y}=E\left(\left(\underline X-E\left(\underline X\right)\right)\left(\underline Y-E\left(\underline Y\right)\right)^\top\right)$, which is the cross-covariance matrix
 
-
-
 ### 7.3 Functions of Random Vectors
 
 #### a. set-up
 
-* Let $\underline X$ be an $n$-dimensional random vector with joint PDF $f_\underline X(\underline x)$.
+* Let $\underline X$ be an $n$-dimensional random vector with joint PDF $f_{\underline X}(\underline x)$.
 
 * Let $G: \mathbb R^n\rightarrow\mathbb R^n$ be a continuous and invertible function with continuous partial derivatives and let us denote $H=G^{-1}$
 
@@ -1896,13 +1794,13 @@ where $C, D\sub \mathbb R$
 
 #### b. Main Result: Method of Transformation
 
-The PDF of the mapped vector $\underline Y$, 
+The PDF of the mapped vector $\underline Y$,
 $$
-f_\underline Y(\underline y)=f_{Y_1, Y_2, \dots, Y_n}(y_1, y_2,\dots, y_n)
+f_{\underline Y}(\underline y)=f_{Y_1, Y_2, \dots, Y_n}(y_1, y_2,\dots, y_n)
 $$
 is given by
 $$
-f_\underline Y(\underline y)=f_\underline X(H(\underline Y))\cdot |J|
+f_{\underline Y}(\underline y)=f_{\underline X}(H(\underline Y))\cdot |J|
 $$
 where $J$ is the Jacobian of $H$ defined by
 $$
@@ -1914,8 +1812,6 @@ J=\operatorname{det}\left[\begin{array}{llll}
 \end{array}\right]_{n \times n}
 $$
 and evaluated at $(y_1,y_2,\dots,y_n)$
-
-
 
 ### 7.4 Normal (Gaussian) Random Vectors
 
@@ -1950,51 +1846,50 @@ and evaluated at $(y_1,y_2,\dots,y_n)$
   
 * Properties
 
-  1. Uncorrelation  $\iff$ Independece (Independence always means uncorrelation but uncorrelation means independence when it is Gaussian)
+  * Uncorrelation  $\iff$ Independece (Independence always means uncorrelation but uncorrelation means independence when it is Gaussian)
 
-  2. Linear Transformation Preserves "Gaussianity"
-
+  * Linear Transformation Preserves "Gaussianity"
      Theorem: If $\underline X=[X_1, X_2, \dots, X_n]^\top$ is a Normal vector $\underline X\sim N(\underline m, [C])$, given $[A]$ is an $m\times n$ fixed matrix and $\underline b$ is an $m$-dimensional fixed vector, then
-     $$
-     \underline Y=[A]\underline X+\underline b\sim N([A]\underline m+\underline b, [A][C][A]^\top)
-     $$
-     Application: If $X_{1}, X_{2}, \ldots, X_{n}$ are correlated multi-variate Gaussian RVs (i.e. $[C]_\underline X$ is not diagnal), one can choose $[A]$ such that
-     $$
-     [C]_Y=[A][C]_X[A]^\top~~~~\text{is diagonal}
-     $$
+    $$
+    {\underline Y}=[A]{\underline X}+{\underline b}\sim N([A]\underline m+\underline b, [A][C][A]^\top)
+    $$
+     Application: If $X_{1}, X_{2}, \ldots, X_{n}$ are correlated multi-variate Gaussian RVs (i.e. $[C]_{\underline X}$ is not diagnal), one can choose $[A]$ such that
+    $$
+    [C]_Y=[A][C]_X[A]^\top~~~~\text{is diagonal}
+    $$
      Then $Y_{1}, Y_{2}, \ldots, Y_{n}$ are uncorrelated and because they are jointly Gaussian RVs, then they are independent.
 
-  3. Joint CF
-     $$
-     \Phi_\underline X(\underline \omega) \triangleq E(e^{j\underline \omega^\top\underline X})=E(e^{j\omega_1X_1+j\omega_2X_2+\dots+j\omega_nX_n})
-     $$
-     Since $\underline X$ is a jointly Gaussian RVs, we have
-     $$
-     \begin{aligned}
-     
-     \Phi_\underline X(\underline \omega)&=\exp \left[-\frac{1}{2} \omega^{\top}[C] \underline{\omega}+j m^{\top} \omega\right] \\
-     &=\exp \left[-\frac{1}{2} \sum_{j=1}^{n} \sum_{k=1}^{n} \operatorname{Cov}\left[x_{j} x_{k}\right] \omega_{j} \omega_{k}+\right.\left.j \sum_{k=1}^{n} m_{k} \omega_{k}\right]
-     \end{aligned}
-     $$
+  * Joint CF
+    $$
+    \Phi_{\underline X}(\underline \omega) \triangleq E(e^{j\underline \omega^\top\underline X})=E(e^{j\omega_1X_1+j\omega_2X_2+\dots+j\omega_nX_n})
+    $$
+    Since $\underline X$ is a jointly Gaussian RVs, we have
+    $$
+    \begin{aligned}
 
-  4. Joint Moments
+    \Phi_{\underline X}(\underline \omega)&=\exp \left[-\frac{1}{2} \omega^{\top}[C] \underline{\omega}+j m^{\top} \omega\right] \\
+    &=\exp \left[-\frac{1}{2} \sum_{j=1}^{n} \sum_{k=1}^{n} \operatorname{Cov}\left[x_{j} x_{k}\right] \omega_{j} \omega_{k}+\right.\left.j \sum_{k=1}^{n} m_{k} \omega_{k}\right]
+    \end{aligned}
+    $$
 
-     Theorem: Let $X_{1}, X_{2}, \ldots, X_{n}$ be $n$-zero mean jointly Gaussian RVs then 
-     $$
-     E\left[X_{1} X_{2} \ldots X_{n}\right]= \begin{cases}0 & \text {when n is odd } \\ 
-     \sum \prod_{j \neq k}^{n} E\left[x_{j} x_{k}\right] &\text {when n is  even }\end{cases}
-     $$
-     where the sum is taken over all distinct pairs
-     Illustration for $n=4$
-     $$
-     E\left(X_{1} X_{2} X_{3} X_{4}\right)=E\left(X_{1} X_{2}\right) E\left(X_{3} X_{4}\right)+E\left(X_{1} X_{3}\right) E\left(X_{2} X_{4}\right)+E\left(X_{1} X_{4}\right) E\left(X_{2} X_{3}\right)
-     $$
-     as a special case we can Let $X_1=X_2=X, Y_1=Y_2=Y$, then we have
-     $$
-     E(X^2Y^2)=E(X^2)E(Y^2)+2E(XY)
-     $$
+  * Joint Moments
 
-#### b. Special Case: $n=2$.
+    Theorem: Let $X_{1}, X_{2}, \ldots, X_{n}$ be $n$-zero mean jointly Gaussian RVs then
+    $$
+    E\left[X_{1} X_{2} \ldots X_{n}\right]= \begin{cases}0 & \text {when n is odd } \\
+    \sum \prod_{j \neq k}^{n} E\left[x_{j} x_{k}\right] &\text {when n is  even }\end{cases}
+    $$
+    where the sum is taken over all distinct pairs
+    Illustration for $n=4$
+    $$
+    E\left(X_{1} X_{2} X_{3} X_{4}\right)=E\left(X_{1} X_{2}\right) E\left(X_{3} X_{4}\right)+E\left(X_{1} X_{3}\right) E\left(X_{2} X_{4}\right)+E\left(X_{1} X_{4}\right) E\left(X_{2} X_{3}\right)
+    $$
+    as a special case we can Let $X_1=X_2=X, Y_1=Y_2=Y$, then we have
+    $$
+    E(X^2Y^2)=E(X^2)E(Y^2)+2E(XY)
+    $$
+
+#### b. Special Case: $n=2$
 
 * Definition: Two RVs $X$ and $Y$ are said to have bivariate normal distribution with parameters $\mu_X, \sigma_X^2,\mu_Y, \sigma_Y^2$, and $\rho$ then their joint PDF is given by:
   $$
@@ -2026,25 +1921,27 @@ and evaluated at $(y_1,y_2,\dots,y_n)$
     Var(Y|X=x)=(1-\rho^2)\sigma_Y^2
     $$
 
-  5. For $n=2$, the joint characteristic Function is 
+  5. For $n=2$, the joint characteristic Function is
      $$
      \begin{aligned}
      &\Phi_{X_{1} X_{2}}\left(\omega_{1}, \omega_{2}\right)=E\left(e^{j \omega_{1} x_{1}+j \omega_{2} x_{2}}\right) \\
      &=\exp \left[-\frac{1}{2}\left(\sigma_{1}^{2} \omega_{1}^{2}+2 \omega_{1} \omega_{2} \rho_{12} \sigma_{1} \sigma_{2}+\sigma_{2}^{2} \omega_{2}^{2}\right)+{j m_{1} \omega_{1}+j m_{2} \omega_{2}}\right]
      \end{aligned}
     $$
-     
+
 ## Chapter 8: Sum of RVs
+
 ### 8.1: General Set-up
-Let $X_1, X_2, ..., X_n$ be a set of RVs and define 
+
+Let $X_1, X_2, ..., X_n$ be a set of RVs and define
 $S_n = \sum_{i=1}^{n}X_i$,
 what are the statistics of $S_n$?
 
 ### 8.2 Mean and Variance
+
 #### Case 1: n is constant
 
-- $E[S_n] = E[\sum_{i=1}^{n}X_i] = \sum_{i=1}^{n}E[X_i]$
+* $E[S_n] = E[\sum_{i=1}^{n}X_i] = \sum_{i=1}^{n}E[X_i]$
 
 #### Case 2: n is random (N is a RV)
-s
 
