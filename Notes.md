@@ -1922,7 +1922,7 @@ and evaluated at $(y_1,y_2,\dots,y_n)$
     $$
 
   5. For $n=2$, the joint characteristic Function is
-     $$
+    $$
      \begin{aligned}
      &\Phi_{X_{1} X_{2}}\left(\omega_{1}, \omega_{2}\right)=E\left(e^{j \omega_{1} x_{1}+j \omega_{2} x_{2}}\right) \\
      &=\exp \left[-\frac{1}{2}\left(\sigma_{1}^{2} \omega_{1}^{2}+2 \omega_{1} \omega_{2} \rho_{12} \sigma_{1} \sigma_{2}+\sigma_{2}^{2} \omega_{2}^{2}\right)+{j m_{1} \omega_{1}+j m_{2} \omega_{2}}\right]
@@ -1931,7 +1931,7 @@ and evaluated at $(y_1,y_2,\dots,y_n)$
 
 ## Chapter 8: Sum of RVs
 
-### 8.1: General Set-up
+### 8.1 General Set-up
 
 Let $X_1, X_2, ..., X_n$ be a set of RVs and define
 $S_n = \sum_{i=1}^{n}X_i$,
@@ -1942,6 +1942,82 @@ what are the statistics of $S_n$?
 #### Case 1: n is constant
 
 * $E[S_n] = E[\sum_{i=1}^{n}X_i] = \sum_{i=1}^{n}E[X_i]$
+  If $X_i$ are identically distributed, i.e, $E[X_i] = E[X]$ for all $i$,
+
+  Thus $E[S_n] = \sum_{i=1}^nE[X] = nE[X]$
+* Variance
+    $$
+     \begin{aligned}
+     Var[S_n] &= Var[\sum_{i=1}^n X_i] \\
+     &=E[(S_n - E[S_n])^2] \\
+     &=E[(\sum_{i=1}^n(X_i - E[X_i]))(\sum_{j=1}^n(X_j - E[X_j]))] \\
+     &=E[\sum_{i=1}^n\sum_{j=1}^n(X_i - E[X_i])(X_j - E[X_j])] \\
+     &=\sum_{i=1}^n\sum_{j=1}^nE[(X_i - E[X_i])(X_j - E[X_j])] \\
+     &=\sum_{i=1}^nVar[X_i] + {\sum_{i=1}^n\sum_{j=1}^n}_{(i\neq j)} Cov[X_i, X_j]
+     \end{aligned}
+    $$
+  * If $\{X_i\}_{i=1}^n$ are mutually uncorelated, i.e., for all $i\neq j$, $Cov[X_i, X_j] = 0$,
+    Then
+    $$Var[S_n] = \sum_{i=1}^nVar[X_i]$$
+  * If $\{X_i\}_{i=1}^n$ are also identically distributed for all $i$, i.e., $Var[X_i] = Var[X]$,
+    Then
+    $$Var[S_n] = nVar[X]$$
 
 #### Case 2: n is random (N is a RV)
+
+* $S_n = \sum_{i=1}^NX_i$
+where N is a discrete RV independent of $X_i$
+
+* Mean:
+  
+  $E_{N, X_i}[S_N] = E_N[E_X[S_N|N]] = E_N[\sum_{i=1}^NE[X_i]]$ (previous case)
+
+  Assume that the $\{X_i\}_{i=1}^N$ are identically distributed
+
+  $E_{N, X_i}[S_N] = E_N[NE[X]] = E[N]E[X]$
+
+* Variance:
+  
+  Similarly it can be shown that
+
+  $Var[S_N] = E[N]Var[X] + Var[N]E[X]^2$ under assumption that the $\{X_i\}_{i=1}^N$ are i.i.d RVs
+
+### 8.3 PDF
+
+#### Case 1:n is constant
+
+* Let us start with C.F of $S_n$
+  
+  $\Phi_{S_n}(w) = E[e^{jwS_n}] = E[e^{jw\sum_{i=1}^nX_i}] = E[\prod_{i=1}^ne^{iwX_i}]$
+
+  If $X_i$ are independent,
+
+  $E[\prod_{i=1}^ne^{iwX_i}] = \prod_{i=1}^nE[e^{iwX_i}] = \prod_{i=1}^n\Phi_{X_i}(w)$
+
+  If $\{X_i\}_{i=1}^N$ are identically distributed
+
+  $\Phi_{X_i}(w) = \Phi_{X}(w)$ for alll $i$
+
+  Then $\Phi_{S_n}(w) = (\Phi_{X}(w))^n$
+
+* To get the PDF
+  
+  $f_{S_N}(s)=FT^{-1}[\Phi_{S_n}(w)] \stackrel{X_i are \text{independent}}{=} FT^{-1}(\prod_{i=1}^n\Phi_{X_i}(w))$
+
+  Since $f_1(t) *f_2(t)* \dots * f_n(t) \xleftrightarrow{FT} H_1(w)H_2(w)\dots H_3(w)$
+
+  $f_{S_N}(s)=f_{X_i}(X_1) *f_{X_2}(X_2)* \dots * f_{X_n}(X_3)$
+
+#### Case 2:n is random (N is a RV)
+
+
+
+
+### 8.4 Central Limit Theorem
+
+#### a. CLT Theorem
+
+#### b. CLT Approximation
+
+#### c. Continuity Correction for Discrete RVs
 
